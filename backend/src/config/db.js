@@ -5,14 +5,21 @@ const { Pool } = pg;
 
 const isProduction = env.nodeEnv === "production";
 
-export const pool = new Pool({
-  host: env.dbHost,
-  port: env.dbPort,
-  database: env.dbName,
-  user: env.dbUser,
-  password: env.dbPassword,
-  ssl: isProduction ? { rejectUnauthorized: false } : false,
-});
+export const pool = new Pool(
+  env.databaseUrl
+    ? {
+        connectionString: env.databaseUrl,
+        ssl: { rejectUnauthorized: false },
+      }
+    : {
+        host: env.dbHost,
+        port: env.dbPort,
+        database: env.dbName,
+        user: env.dbUser,
+        password: env.dbPassword,
+        ssl: isProduction ? { rejectUnauthorized: false } : false,
+      }
+);
 
 export const testDatabaseConnection = async () => {
   const client = await pool.connect();

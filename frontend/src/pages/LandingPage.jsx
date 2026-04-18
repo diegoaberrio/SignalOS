@@ -72,8 +72,8 @@ function LandingPage() {
 
           <h2 className="landing-page__info-title">Captura interés y contexto comercial</h2>
           <p className="landing-page__info-text">
-            Registra una interacción real y genera una lectura inicial de prioridad, encaje y
-            coincidencia sugerida.
+            Registra una interacción real desde una experiencia ligera y convierte ese primer
+            contacto en una señal útil para lectura comercial.
           </p>
         </article>
 
@@ -87,32 +87,25 @@ function LandingPage() {
 
           <h2 className="landing-page__info-title">Explota señales con foco territorial</h2>
           <p className="landing-page__info-text">
-            Consulta empresas, historial, prioridad y operación interna desde una vista conectada a
-            la API real.
+            Consulta empresas, historial, prioridad y contexto operativo desde una vista privada
+            conectada a la API real del sistema.
           </p>
         </article>
-      </div>
 
-      <div className="portfolio-zone landing-page__portfolio landing-page__portfolio--responsive">
-        <div className="portfolio-zone__header portfolio-zone__header--responsive">
-          <span className="portfolio-zone__microchip">
-            <Sparkles size={12} aria-hidden="true" />
-            <span>Portfolio</span>
-          </span>
+        <article className="landing-page__info-card landing-page__info-card--wow landing-page__info-card--responsive">
+          <div className="landing-page__info-top landing-page__info-top--responsive">
+            <span className="landing-page__info-icon" aria-hidden="true">
+              <Target size={18} />
+            </span>
+            <span className="landing-page__info-label">Resultado</span>
+          </div>
 
-          <a
-            href="https://diegoincode.com"
-            target="_blank"
-            rel="noreferrer"
-            className="portfolio-link portfolio-zone__inline-link portfolio-zone__inline-link--responsive"
-          >
-            <span>diegoincode.com</span>
-          </a>
-        </div>
-
-        <p className="portfolio-zone__text">
-          Espacio general para enlazar credibilidad, producto y presentación visual de marca.
-        </p>
+          <h2 className="landing-page__info-title">Más foco comercial, menos prospección a ciegas</h2>
+          <p className="landing-page__info-text">
+            Prioriza mejor por zona, intención y contexto para orientar la acción comercial hacia
+            oportunidades con mayor sentido operativo.
+          </p>
+        </article>
       </div>
     </section>
   );

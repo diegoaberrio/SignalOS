@@ -1,7 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import {
   Activity,
-  ArrowUpRight,
   Compass,
   LogIn,
   Sparkles,
@@ -29,6 +28,7 @@ function PublicLayout() {
                 <Link
                   to="/"
                   className="brand-link public-brand-link public-brand-link--responsive"
+                  aria-label="Ir al inicio de SignalOS"
                 >
                   <span className="public-brand-link__icon" aria-hidden="true">
                     <Activity size={16} />
@@ -49,30 +49,6 @@ function PublicLayout() {
             <span className="brand-badge public-brand-badge public-brand-badge--responsive">
               Inteligencia comercial territorial para decisiones con más foco
             </span>
-
-            <div className="portfolio-zone public-layout__portfolio public-layout__portfolio--responsive">
-              <div className="portfolio-zone__header portfolio-zone__header--responsive">
-                <span className="portfolio-zone__microchip portfolio-zone__microchip--responsive">
-                  <Sparkles size={12} aria-hidden="true" />
-                  <span>Portfolio</span>
-                </span>
-
-                <a
-                  href="https://diegoincode.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="portfolio-link portfolio-zone__inline-link portfolio-zone__inline-link--responsive"
-                  aria-label="Abrir portfolio de Diego In Code en una nueva pestaña"
-                >
-                  <span>diegoincode.com</span>
-                  <ArrowUpRight size={14} aria-hidden="true" />
-                </a>
-              </div>
-
-              <p className="portfolio-zone__text public-layout__portfolio-text">
-                Espacio general de presentación y credibilidad visual del producto.
-              </p>
-            </div>
           </div>
 
           <nav
